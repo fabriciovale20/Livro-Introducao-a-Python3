@@ -16,4 +16,3 @@ tempo_em_dias = ((tempo_perdido_por_dia + tempo_já_perdido) / 60 ) / 24
 print(f'Você perde cerca de {tempo_perdido_por_dia} minutos de vida por dia.')
 print(f'Você já perdeu {tempo_já_perdido} minutos de vida pelos cigarros fumados.')
 print(f'Totalizando {tempo_em_dias:.0f} dias perdidos.')
-
