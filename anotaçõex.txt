@@ -63,3 +63,19 @@ Resultado:
 [0] 5
 [1] 9
 [2] 13
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ No DICIONÁRIO podemos mostrar apenas as Chaves (keys) ou Valores (values):
+tabela = {
+    'Alface': 0.45,
+    'Batata': 1.20,
+    'Tomate': 1,
+    'Feijão': 1.50
+}
+
+print(tabela.keys()) # Irá imprimir apenas chaves
+Resultado:
+dict_keys(['Alface', 'Batata', 'Tomate', 'Feijão'])
+
+print(tabela.values()) # Imprimi os valores
+Resultado:
+dict_values([0.45, 1.2, 1, 1.5])
