@@ -1,0 +1,38 @@
+→ Comando "break" também interrompe o laço FOR.
+
+→ Também pode utilizar o ELSE no FOR:
+"""
+    L = [7, 9, 10, 12]
+    p = int(input('Digite um número a pesquisar: '))
+
+    for e in L:
+        if e == p:
+            print('Elemento encontrado!')
+            break
+    else:
+        print('Elemento não encontrado.')
+""""
+    Nesse caso, se o FOR percorrer toda lista sem ser interrompido, ele executará o ELSE no final.
+    OBS.: O mesmo serve para o WHILE, também pode-se aplicar o ELSE no WHILE.
+
+→ Criar uma cópia de uma lista, exemplo: 
+    lista = []
+    lista_2 = lista[:]
+
+→ Adicionar elementos numa lista:
+    L = L + [1] é a mesma coisa que L.append(1)
+
+→ Adicionar uma lista na outra usando EXTEND:
+    L = ['a', 'b']
+    L.extend(['c'])
+    L = ['a', 'b', 'c']
+
+    L = ['a', 'b', 'c']
+    L.extend(['d', 'e'])
+    L = ['a', 'b', 'c', ['d', 'e']]
+
+→ Usando listas como Fila, recebe o conceito: O último elemento a entrar é o último a sair.
+Funciona como uma fila de banco, o primeiro a chegar é o primeiro a ser atendido.
+
+→ Usando lista como Pilha, recebe o conceito: O último elemento a entrar é o primeiro a sair.
+Funciona como uma pulha de pratos, o último prato a ser colocado na pilha dos pratos é o primeiro a ser lavado.
