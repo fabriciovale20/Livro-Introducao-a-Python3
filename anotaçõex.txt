@@ -79,3 +79,119 @@ dict_keys(['Alface', 'Batata', 'Tomate', 'Feijão'])
 print(tabela.values()) # Imprimi os valores
 Resultado:
 dict_values([0.45, 1.2, 1, 1.5])
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Podemos criar uma tupla de várias maneiras:
+tupla = (1, 2, 3) ou tupla = 1, 2, 3
+
+Podemos transformar lista em tupla:
+L = [1, 2, 3]
+T = tuple(L)
+print(T)
+Resultado:
+(1, 2, 3)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Descompactar valores e atribuir valores
+a, b = 1, 2     # a vai ser 1 e b vai ser 2
+
+Utilizamos * para informar que serão vários valores, criando uma lista:
+*a, b = 1, 2, 3     # a recebe os primeiros valores inseridos que é 1 e 2 e b recebe o último
+print(a)
+print(b)
+
+Resultado:
+[1, 2]
+3
+
+Se fizemos para *b será da mesma forma:
+a, *b = 1, 2, 3     # a recebe o primeiro valor inserido que é 1 e b recebe o restante
+print(a)
+print(b)
+
+Resultado:
+1
+[2, 3]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Conjunto (Set) é semelhante ao da matemática, parecido com uma lista porém não permite repetir valores dentro,
+não mantem ordem dos elementos e usam {} semelhante ao dicionário:
+a = set()
+
+a.add(1)
+a.add('a')
+a.add(3)
+
+print(a)
+Resultado:
+{1, 3, 'a'}
+
+a.add('a')
+a.add(4)
+
+print(a)
+Resultado:
+{1, 3, 'a', 4}
+>>>>>>>>>>>>>>>
+Outro exemplo:
+a = {0, 1, 2, 3, -1}
+b = {2, 3}
+c = set([4, 5, 6])
+
+print(a | b)        # Utilizando | realiza a união entre os dois conjuntos
+Resultado:
+{0, 1, 2, 3, -1}
+
+print(a | c)
+Resultado:
+{0, 1, 2, 3, 4, 5, 6, -1}
+
+print(a - b)        # Utilizando - vai subtrair os elementos de b que tem que em a.
+Resultado:
+{0, 1, -1}
+
+print(b - a)        # Nesse caso, não sobrou nenhum valor.
+Resultado:
+set()
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Transformar uma string em lista:
+nome = list('Fabrício Vale')
+
+→ Para fazer o inverso, utilizamos o JOIN
+s = ''.join(nome)
+print(s)
+Resultado:
+Fabrício Vale
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Para identificarmos se uma String começa (startswith) ou termina (endswith) com alguns caracteres específios:
+nome = 'Fabrício Vale'
+print(nome.startswith('Fabrício'))
+Resultado:
+True
+
+print(nome.startswith('fabrício'))
+Resultado:
+False
+
+print(nome.endswith('Vale'))
+Resultado:
+True
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Uma forma simples de verificar se uma palavra pertence a uma String:
+nome = 'Fabrício Vale'
+print('Fabrício' in nome)
+Resultado:
+True
+
+print('Vale' not in nome)
+Resultado:
+False
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Pequisando dentro da String com find:
+s = 'Um tigre, dois tigres, três tigres'
+s.find('tigres')
+15
+
+s.rfind('tigres')  # r corresponde a iniciar a pesquisa pela direita
+20
+
+s.find('tigres', 7)  # 7 corresponde por onde começar a pesquisar, a partir da 7º posição
+
+s.find('tigres', 0, 10)  # 0 início e 10 fim
