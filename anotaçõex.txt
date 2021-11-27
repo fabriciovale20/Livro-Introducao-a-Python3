@@ -195,3 +195,35 @@ s.rfind('tigres')  # r corresponde a iniciar a pesquisa pela direita
 s.find('tigres', 7)  # 7 corresponde por onde começar a pesquisar, a partir da 7º posição
 
 s.find('tigres', 0, 10)  # 0 início e 10 fim
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Pode substituir alguns caracteres numa string utilizando o REPLACE replace(a, b, c)
+a = Esse primeiro parâmetro é o que você quer substituir
+b = O segundo é pelo que você quer substituir
+c = O último é quantas vezes você quer que ele substituia
+
+Exemplo:
+s = 'um tigre, dois tigres, três tigres'
+s.replace('tigre', 'gato')
+Resultado:
+'um gato, dois gatos, três gatos
+
+s.replace('tigre', 'gato', 1)       # Só irá substituir uma vez, por ter o terceiro parâmentro como 1
+'um gato, dois tigres, três tigres'
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Para remover alguns caracteres ou espaços, podemos utilizar o stri() e para caracteres, por exemplo strip(','), irá remover todas as vírgulas
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Tabela de alguns formatos
+b - Binário  # Exemplo print(f'{5678:b}') >>> Resultado: 1011000101110
+c - Caractere
+d - Base 10
+n - Base 10 local
+o - Octal
+x - Hexadecimal com letras minúsculas
+X - Hexadecimal com letras maiúculasicas
+e - Notação científica com e minúsculo
+E - Notação científica com e maiúculasica
+f - Decimal
+g - Genérico
+G- Genérico
+n - local
+% - Percentual
