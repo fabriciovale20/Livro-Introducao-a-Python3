@@ -1,5 +1,18 @@
 """
-    Programa 7.2 - Jogo da forca
+    Exercício 09
+
+    Modifique o Programa 7.2 para utilizar listas de strings para desenhar o boneco da forca. Você pode utilizar uma lista para cada linha
+e organizá-las em uma lista de listas. Em vez de controlar quando imprimir cada parte, desenhe nestas listas, substituindo o elemento a desenhar:
+Exemplo:
+linha = list('X------')
+linha
+['X', '-', '-', '-', '-', '-', '-']
+
+linha[6] = '|'
+linha
+['X', '-', '-', '-', '-', '-', '|']
+''.join(linha)
+'X-----|'
 """
 
 palavra = input('Digite a palavra secreta: ').lower().strip() # 1
@@ -36,24 +49,36 @@ while True:
             print('Você errou!')
     print('X==:==\nX  :  ')
     print('X  O  ' if erros >= 1 else 'X')
-    linha2 = ''
+    
+    linha = list('      ')
 
     if erros == 2:
-        linha2 = '  |  '
+        linha[2] = '|'
     elif erros == 3:
-        linha2 = ' \|  '
+        linha[1] = '/'
+        linha[2] = '|'
     elif erros >= 4:
-        linha2 = ' \|/ '
+        linha[1] = '/'
+        linha[2] = '|'
+        linha[3] = '\\'
 
-    print(f'X{linha2}')
-    linha3 = ''
+    linha = ''.join(linha)
+    print(f'X{linha}')
+
+    linha3 = list('      ')
 
     if erros == 5:
-        linha3 += ' /  '
+        linha3[1] = '/'
     elif erros >= 6:
-        linha3 += ' / \ '
+        linha3[1] = '/'
+        linha3[3] = '\\'
+    
+    linha3 = ''.join(linha3)
     print(f'X{linha3}')
+
     print('X\n-----------')
     if erros == 6:
         print('Enforcado!')
+        print(f'A palavra secreta é: {palavra}')
         break
+

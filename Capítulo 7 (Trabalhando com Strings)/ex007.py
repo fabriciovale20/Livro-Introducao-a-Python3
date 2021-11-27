@@ -1,5 +1,7 @@
 """
-    Programa 7.2 - Jogo da forca
+    Exercício 07
+
+    Modifique o jogo da forca (Programa 7.2) de forma a escrever a palavra secreta caso o jogador perca.
 """
 
 palavra = input('Digite a palavra secreta: ').lower().strip() # 1
@@ -41,9 +43,9 @@ while True:
     if erros == 2:
         linha2 = '  |  '
     elif erros == 3:
-        linha2 = ' \|  '
+        linha2 = ' /|  '
     elif erros >= 4:
-        linha2 = ' \|/ '
+        linha2 = ' /|\ '
 
     print(f'X{linha2}')
     linha3 = ''
@@ -56,4 +58,6 @@ while True:
     print('X\n-----------')
     if erros == 6:
         print('Enforcado!')
+        print(f'A palavra secreta é: {palavra}')
         break
+
