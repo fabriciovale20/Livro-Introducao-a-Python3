@@ -4,14 +4,17 @@
     Escreva um generator capaz de gerar a série dos números primos.
 """
 
-cont = 0
+termos = 100
 
-for c in range(100):
-    for x in c:
-        if c % x == 0:
-            cont += 1
+def primo():
+    for n in range(1, termos):
+        primo = 0
 
-    if cont == 2:
-        print(f'{c} é primo')
-        
-    cont = 0
+        for c in range(1, n+1):
+            if n % c == 0:
+                primo += 1
+
+        if primo == 2:
+            yield n
+
+print([x for x in primo()])
