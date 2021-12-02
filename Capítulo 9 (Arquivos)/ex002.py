@@ -8,9 +8,14 @@ O programa deve imprimir apenas as linhas entre dois valores (incluindo as linha
 nome = input('Digite o nome do arquivo: ')
 
 with open(f'{nome}.txt', 'w') as arquivo:
-    for linha in range(1, 101, 2):
+    for linha in range(1, 101):
         arquivo.write(f'{linha}\n')
+
+início = int(input('Início: '))
+fim = int(input('Fim: '))
 
 with open(f'{nome}.txt', 'r') as arquivo:
     for linha in arquivo.readlines():
-        print(linha)
+        linha = int(linha)
+        if linha >= início and linha <= fim:
+            print(linha)
