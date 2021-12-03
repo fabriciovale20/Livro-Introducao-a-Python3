@@ -1,10 +1,11 @@
 """
-    Programa 9.2 - Uso do with
+    Programa 9.3 - Gravação de números pares e ímpares em arquivos diferentes
 """
 
-import sys
-
-print(f'Número de parâmetros: {len(sys.argv)}')
-
-for n, p in enumerate(sys.argv):
-    print(f'Parâmentro {n} = {p}')
+with open('ímpares.txt', 'w') as ímpares:
+    with open('pares.txt', 'w') as pares:
+        for n in range(0, 1000):
+            if n % 2 == 0:
+                pares.write(f'{n}\n')
+            else:
+                ímpares.write(f'{n}\n')
