@@ -5,20 +5,17 @@
 Cada página terá no máximo 60 linhas. Adicione na última linha de cada página o número da página atual e o nome do arquivo original.
 """
 
-pagina = 1
-valor_atual = 0
+pagina = linhas = 1
 
 with open('textoex007.txt') as texto:
+    with open('paginadoex007.txt', 'w') as pag:
         for palavras in texto.readlines():
-            with open(f'pagina{pagina}.txt', 'w') as pag:
-            linhas = 0
 
+            if linhas < 60 and len(palavras[0]) <= 76:
+                pag.write(f'{palavras}')
                 linhas += 1
-
-                if linhas < 60:
-                    pag.write(f'{palavras}')
-                else:
-                    pag.write(f'Pagina {pagina}')
-                    pagina += 1
-                    linhas = 0
-                    valor_atual = linhas
+            else:
+                pag.write(f'Pagina {pagina}\n')
+                pagina += 1
+                linhas = 1
+                    
