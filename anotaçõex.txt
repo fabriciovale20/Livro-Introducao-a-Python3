@@ -210,7 +210,7 @@ Resultado:
 s.replace('tigre', 'gato', 1)       # Só irá substituir uma vez, por ter o terceiro parâmentro como 1
 'um gato, dois tigres, três tigres'
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-→ Para remover alguns caracteres ou espaços, podemos utilizar o stri() e para caracteres, por exemplo strip(','), irá remover todas as vírgulas
+→ Para remover alguns caracteres ou espaços, podemos utilizar o strip() e para caracteres, por exemplo strip(','), irá remover todas as vírgulas
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 → Tabela de alguns formatos
 b - Binário  # Exemplo print(f'{5678:b}') >>> Resultado: 1011000101110
