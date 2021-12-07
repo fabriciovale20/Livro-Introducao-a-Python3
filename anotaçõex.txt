@@ -286,3 +286,35 @@ Transformando para Gerador
 3
 6
 9
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Criando diretórios através do Python
+
+import os
+os.mkdir('pasta')
+>>> pasta1
+
+os.makdeirs('pasta1/pasta2/pasta3')
+>>> pasta1
+        pasta2
+            pasta3
+
+→ Alterando nome do diretório
+
+import os
+
+os.mkdir('velho')
+os.rename('velho', 'novo')
+>>> novo
+
+→ Apagar diretório
+import os
+
+os.mkdir('vago')
+os.rmdir('vago')
+>>> ''
+
+→ Listar todos os arquivos
+import os
+
+print(os.list(pasta1))
+>>> pasta2
