@@ -318,3 +318,12 @@ import os
 
 print(os.list(pasta1))
 >>> pasta2
+----------------------------------------------------------------------------------------------------------------------------------------------------
+→ Identificação de alguns termos de Classes e Objetos
+
+class Televisão:
+    def __init__(self, min=2, max=14): # Chamado de Construtor ou Inicializador por criar objetos
+        self.ligada = False  # Objeto
+        self.canal = int(input('Canal inicial: '))  # Objeto
+        self.cmin = min  # Objeto
+        self.cmax = max  # Objeto
