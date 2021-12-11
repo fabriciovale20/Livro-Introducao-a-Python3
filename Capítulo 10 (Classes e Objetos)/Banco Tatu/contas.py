@@ -1,8 +1,8 @@
 class Conta:
     def __init__(self, clientes, número, saldo=0):
         self.saldo = 0
-        self.clientes = clientes
-        self.telefone = clientes
+        self.clientes = clientes[0].nome
+        self.telefone = clientes[0].telefone
         self.número = número
         self.operações = []
         self.deposito(saldo)
