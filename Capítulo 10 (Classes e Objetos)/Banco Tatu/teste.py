@@ -1,15 +1,18 @@
 from clientes import Cliente
 from bancos import Banco
-from contas import Conta
+from contas import Conta, ContaEspecial
 
 joão = Cliente("João da Silva", "777-1234")
 maria = Cliente("Maria Silva", "555-4321")
-josé = Cliente('José Vargas', '9721-3040')
 
-contaJM = Conta([joão, maria], 100)
-contaJ = Conta([josé], 10)
+conta1 = Conta([joão], 1, 100)
+conta2 = ContaEspecial([maria], 2, 500, 1000)
 
-tatu = Banco('Tatu')
-tatu.abre_conta(contaJM)
-tatu.abre_conta(contaJ)
-tatu.lista_contas()
+conta1.saque(50)
+conta2.deposito(300)
+conta1.saque(190)
+conta2.deposito(95.15)
+conta2.saque(500)
+
+conta1.extrato()
+conta2.extrato()
